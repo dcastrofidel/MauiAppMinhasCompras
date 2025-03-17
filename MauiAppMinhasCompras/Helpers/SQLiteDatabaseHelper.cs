@@ -53,7 +53,7 @@ namespace MauiAppMinhasCompras.Helpers
             //seleção da tabela produto e aplicação do filtro para buscar na coluna descrição
             //com registros que tenham a string Q, os caracteres "%" indicam que a letra pode entar antes 
             //ou depois de qualquer string, assim como no Work Bench
-            string sql = "SELECT * Produto WHERE descricao LIKE '%" + q + "%'";
+            string sql = "SELECT * FROM Produto WHERE descricao LIKE '%" + q + "%'";
             return _conn.QueryAsync<Produto>(sql);
         }
     }
